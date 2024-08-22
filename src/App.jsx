@@ -8,6 +8,7 @@ import { PDF } from "./components/PDF";
 import { interp1d } from "./utils/calculadorDeArea";
 import { priceListGalpon, priceListTinglado } from "./utils/precios";
 import { materialesMap } from "./utils/materiales";
+import { copiarTodo } from "./utils/copiarPrecio";
 
 const initialFormaDePago = `
       Pago contado;
@@ -192,7 +193,7 @@ const App = () => {
     setAlto(5);
     setLargo(25);
     setCerramiento(4.5);
-    setPorcentaje(3);
+    setPorcentaje(0);
     setKm(0);
     setResultado(null);
     setCliente("");
@@ -252,6 +253,11 @@ const App = () => {
         formasPago={formasPago}
         setFormasPago={setFormasPago}
       />
+      <button
+        onClick={() => copiarTodo(descripcion, materiales, importeTotal)}
+        className="copy-btn">
+        Copiar Detalle
+      </button>
       <PDF
         cliente={cliente}
         descripcion={descripcion}

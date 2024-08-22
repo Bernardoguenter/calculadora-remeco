@@ -58,7 +58,7 @@ button {
   height: 4rem;
 }
 button:hover {
-  background-color: #45a049;
+  opacity: 0.8;
 }
 div {
   background-color: white;
