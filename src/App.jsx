@@ -218,7 +218,7 @@ const App = () => {
     setAlto(initialValues.alto);
     setLargo(initialValues.largo);
     setCerramiento(initialValues.cerramiento);
-    setPorcentaje(initialValues.cerramiento);
+    setPorcentaje(initialValues.porcentaje);
     setKm(initialValues.km);
     setResultado(initialValues.resultado);
     setCliente(initialValues.cliente);
