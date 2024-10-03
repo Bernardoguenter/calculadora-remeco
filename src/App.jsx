@@ -95,11 +95,10 @@ const App = () => {
     }
 
     if (material === "Perfil U Ángulo") {
-      precioPorMetro += 24;
+      precioPorMetro += 20;
     } else if (material === "Alma Llena") {
-      precioPorMetro += 48;
+      precioPorMetro += 42;
     }
-
     //CALCULAR COLUMNAS
     const numColumnasLargo = Math.floor(largo / 5) + 1;
     const totalColumnas = numColumnasLargo * 2;
