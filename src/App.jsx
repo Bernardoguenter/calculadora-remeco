@@ -8,7 +8,7 @@ import { PDF } from "./components/PDF";
 import { interp1d } from "./utils/calculadorDeArea";
 import { priceListGalpon, priceListTinglado } from "./utils/precios";
 import { materialesMap } from "./utils/materiales";
-import { copiarTodo } from "./utils/copiarPrecio";
+import { copiarTodo, copiarTodoCristian } from "./utils/copiarPrecio";
 
 const initialValues = {
   estructura: "Galpón",
@@ -279,6 +279,13 @@ const App = () => {
         onClick={() => copiarTodo(descripcion, materiales, importeTotal)}
         className="copy-btn">
         Copiar Detalle
+      </button>
+      <button
+        onClick={() =>
+          copiarTodoCristian(descripcion, materiales, importeTotal)
+        }
+        className="copy-btn-cristian">
+        Cristian Poul
       </button>
       <PDF
         cliente={cliente}

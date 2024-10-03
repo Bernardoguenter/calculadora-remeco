@@ -40,3 +40,21 @@ export const copiarTodo = async (descripcion, materiales, precio) => {
     console.error(error.message);
   }
 };
+
+export const copiarTodoCristian = async (descripcion, materiales, precio) => {
+  const precioConRecago = precio * 1.03;
+  const valorFormateado = formatNumber(precioConRecago);
+
+  const textoCompleto = `Descripción: ${descripcion}\nMateriales: ${materiales}\nPrecio: ${valorFormateado}`;
+
+  if (!descripcion && !materiales && !precio) {
+    alert("Debes llenar los campos antes de copiar el texto");
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(textoCompleto);
+  } catch (error) {
+    console.error(error.message);
+  }
+};

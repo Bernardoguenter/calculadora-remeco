@@ -91,6 +91,12 @@ div > p > span {
 .copy-btn {
   background-color: #2196f3;
 }
+
+.copy-btn-cristian {
+  margin-top: 1rem;
+  background-color: rgb(33, 245, 245);
+  color: black;
+}
 .generatePDF-btn {
   background-color: #f32121;
 }
